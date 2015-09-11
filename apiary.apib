@@ -8,8 +8,8 @@ Mock de los servicios REST que utilizará Sentinel Swift.
 # Group Services
 
 ##getConfig [/getConfig]
-### getConfig [POST]
 Obtiene la configuración de un flujo
+### getConfig [POST]
 + Request (application/json)
 
         {
@@ -24,9 +24,9 @@ Obtiene la configuración de un flujo
         }
 
 ## isAlive [/isAlive]
+Verifica si un flujo esta funcionando correctamente.
 ### isAlive [POST]
 
-Verifica si un flujo esta funcionando correctamente.
 
 + Request (application/json)
 
@@ -43,9 +43,8 @@ Verifica si un flujo esta funcionando correctamente.
             }
 
 ## stats [/stats]
-### stats [GET]
-
 Retorna las estadísticas de los servicios.
+### stats [GET]
 
 + Response 200 (application/json)
 
@@ -56,9 +55,8 @@ Retorna las estadísticas de los servicios.
             }
             
 ## putConfig [/putConfig]
-### putConfig [POST]
-
 Envía la configuración de un flujo.
+### putConfig [POST]
 
 + Request (application/json)
 
@@ -70,9 +68,8 @@ Envía la configuración de un flujo.
 + Response 200 (application/json)
 
 ## pause [/pause]
-### pause [POST]
-
 Detiene un flujo.
+### pause [POST]
 
 + Request (application/json)
 
@@ -84,9 +81,8 @@ Detiene un flujo.
 
 
 ## start [/start]
-### start [POST]
-
 Reinicia un flujo.
+### start [POST]
 
 + Request (application/json)
 
@@ -97,9 +93,8 @@ Reinicia un flujo.
 + Response 200 (application/json)
 
 ## status [/status]
-### status [POST]
-
 Obtiene el estado de un flujo.
+### status [POST]
 
 + Request (application/json)
 
