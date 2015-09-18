@@ -188,6 +188,27 @@ Retorna las configuraciones destino de los flujos
 
     + Body
 
+            [{
+                "tipoMsj": "MTE",
+                "tipoFlujo": "E",
+                "codMsj": 103,
+                "path": "C://Desktop/Destino/Entrada"
+            }]
+            
+## writeMsg [/writeMsg]
+Retorna las configuraciones destino de los flujos
+### writeMsg [POST]
+
++ Request (application/json)
+
+        {
+            "msg": "idMessage"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
             {
                 "stats": true
             }
