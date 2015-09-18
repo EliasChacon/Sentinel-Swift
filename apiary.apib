@@ -4,7 +4,7 @@ HOST: http://localhost:9088/services
 # Sentinel Swift REST
 Servicios REST que utilizará Sentinel Swift.
 
-# Group Services
+# Group PU Services
 
 ##getConfig [/getConfig]
 Obtiene la configuración de un flujo
@@ -107,4 +107,87 @@ Obtiene el estado de un flujo.
     
             {
                 "status": "ok"
+            }
+            
+# Group File Handler Services
+
+## putSource [/putSource]
+Almacena las configuraciones de los flujos
+### putSource [POST]
++ Request (application/json)
+
+        [{
+            "tipoMsj": "MTE",
+            "tipoFlujo": "E",
+            "codMsj": 103,
+            "path": "C://Desktop/Entrada"
+        }]
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "status": "ok"
+            }
+
+## getSource [/getSource]
+Verifica si un flujo está funcionando correctamente.
+### getSource [POST]
+
+
++ Request (application/json)
+
+        {
+            "idFlujo": "readFile"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "tipoMsj": "MTE",
+                "tipoFlujo": "E",
+                "codMsj": 103,
+                "path": "C://Desktop/Entrada"
+            }
+
+## putDestinies [/putDestinies]
+Retorna las estadísticas de los servicios.
+### putDestinies [POST]
+
++ Request (application/json)
+
+        [{
+            "tipoMsj": "MTE",
+            "tipoFlujo": "E",
+            "codMsj": 103,
+            "path": "C://Desktop/Entrada"
+        }]
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "status": "ok"
+            }
+            
+## getDestinies [/getDestinies]
+Envía la configuración de un flujo.
+### getDestinies [POST]
+
++ Request (application/json)
+
+        {
+            "idFlujo": "readFile"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "stats": true
             }
