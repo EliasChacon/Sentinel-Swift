@@ -212,3 +212,60 @@ Retorna las configuraciones destino de los flujos
             {
                 "stats": true
             }
+            
+# Group Notificador Services
+
+## putEndpoints [/putEndpoints]
+Almacena las configuraciones origen de los flujos
+### putEndpoints [POST]
++ Request (application/json)
+
+        [{
+            "tipo": "SMTP",
+            "urlConfig": "etc/config.txt",
+            "active": true
+        }]
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "status": "ok"
+            }
+            
+## putEndpointStatus [/putEndpointStatus]
+Almacena las configuraciones origen de los flujos
+### putEndpointStatus [POST]
++ Request (application/json)
+
+        [{
+            "tipo": "SMTP",
+            "active": true
+        }]
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "status": "ok"
+            }
+            
+## getEndpointConfig [/getEndpointConfig]
+Almacena las configuraciones origen de los flujos
+### getEndpointConfig [POST]
++ Request (application/json)
+
+        [{
+            "tipo": "SMTP",
+            "active": true
+        }]
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "status": "ok"
+            }
